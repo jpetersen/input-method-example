@@ -1,7 +1,20 @@
 <RCC>
     <qresource prefix="/">
         <file>main.qml</file>
-        <file>MainForm.ui.qml</file>
-        <file>TextInputRow.qml</file>
+        <file>Images/asset_iconholder.png</file>
+        <file>Images/asset_iconholderON.png</file>
+        <file>Images/icon_clear.png</file>
+        <file>Images/icon_date.png</file>
+        <file>Images/icon_digits.png</file>
+        <file>Images/icon_lower.png</file>
+        <file>Images/icon_mail.png</file>
+        <file>Images/icon_normal.png</file>
+        <file>Images/icon_numbers.png</file>
+        <file>Images/icon_password.png</file>
+        <file>Images/icon_phone.png</file>
+        <file>Images/icon_upper.png</file>
+        <file>Images/icon_url.png</file>
+        <file>FocusBoxTextEdit.qml</file>
+        <file>GridTextEdit.qml</file>
     </qresource>
 </RCC>

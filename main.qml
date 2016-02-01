@@ -1,15 +1,26 @@
-import QtQuick 2.4
+import QtQuick 2.5
 import QtQuick.Window 2.2
 
 Window {
-    id: window
+    width: 1280
+    height: 712
 
     visible: true
-    width: 400
-    height: 200
 
-    MainForm {
+    color: "#FFE6E6E6"
+
+    Flickable {
+        id: flickable
+
         anchors.fill: parent
-    }
 
+        flickableDirection: Flickable.VerticalFlick
+
+        contentHeight: textEditGrid.height
+        contentWidth: textEditGrid.width
+
+        GridTextEdit {
+            id: textEditGrid
+        }
+    }
 }
