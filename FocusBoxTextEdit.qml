@@ -50,7 +50,7 @@ FocusScope {
         }
     }
 
-    TextEdit {
+    TextInput {
         id: textInput;
 
         focus: true
@@ -60,14 +60,17 @@ FocusScope {
             family:  fontFamily
         }
 
-        wrapMode: TextEdit.WrapAtWordBoundaryOrAnywhere;
+        wrapMode: TextEdit.NoWrap
         color: focusScope.activeFocus ? "#FF14ABBE" : "#FF808080"
         anchors {
-            left: parent.left
-            right: parent.right
+            fill: parent
             leftMargin: 68
-            verticalCenter: parent.verticalCenter;
+            rightMargin: 68
         }
+
+	verticalAlignment: TextInput.AlignVCenter
+
+	clip: true
     }
 
     Text {
@@ -75,7 +78,7 @@ FocusScope {
 
         text: "Type something..."
         color: "#FF808080"
-        opacity: (value === "" ? 1.0 : 0.0);
+        opacity: ((value === "" && !textInput.inputMethodComposing) ? 1.0 : 0.0);
         font {
             family: fontFamily
             pixelSize: fontSize
@@ -111,6 +114,7 @@ FocusScope {
             anchors.fill: parent
             onClicked: {
                 value = "";
+		textInput.focus = false
                 textInput.forceActiveFocus()
             }
         }

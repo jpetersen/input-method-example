@@ -9,6 +9,8 @@ Window {
 
     color: "#FFE6E6E6"
 
+    title: "Virtual Keyboard Input Example"
+
     Flickable {
         id: flickable
 
